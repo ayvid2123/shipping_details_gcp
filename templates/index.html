@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <style>
+            *{
+                font-family: Cambria;
+                font-size: 20px;
+            }
+            input[type=button]{
+                width: 100%;
+                background: black;
+                border-radius: 5px;
+                color: white;   
+                border: 1px solid black;
+            }
+            input[type=button]:hover{
+                background: white;
+                border-radius: 5px;
+                color: black;   
+                border: 1px solid black;
+                transition: 0.5s;
+            }
+
+        </style>
+    </head>
+    <body>
+        <form action="{{ url_for('index') }}" method="post">
+        <table>
+            <tr>
+                <th>ORDER NO</th>
+                <td><input type="text" name="orderno"></td>
+            </tr>
+            <tr>
+                <th>CONSIGNEE NAME</th>
+                <td><input type="text" name="consigneename"></td>
+            </tr>
+            <tr>
+                <th>SHIPPING ADDRESS</th>
+                <td><input type="text" name="shippingaddress"></td>
+            </tr>
+            <tr>
+                <th>CONSIGNEE CONTACT</th>
+                <td><input type="text" name="consigneecontact"></td>
+            </tr>
+            <tr>
+                <th>PACKAGE WEIGHT</th>
+                <td><input type="text" name="packageweight"></td>
+            </tr>
+            <tr>
+                <th>CONSIGNEE ID</th>
+                <td><input type="text" name="consigneeid"></td>
+            </tr>
+            <tr>
+                <th>
+                    <input type="submit" value="Submit">
+                </th>
+            </tr>
+            <tr>
+                <th rowspan="7"><textarea name="" id="" cols="30" rows="10" placeholder="{{ data }}"></textarea></th>
+            </tr>
+            <tr>
+                <th><a href="{{ url_for('index') }}"></a></th>
+            </tr>
+            <tr>
+                <th><input type="button" value="Search Entry" id=""></th>
+            </tr>
+            <tr>
+                <th><input type="button" value="Add Entry" id=""></th>
+            </tr>
+            <tr>
+                <th><input type="button" value="Update" id=""></th>
+            </tr>
+            <tr>
+                <th><input type="button" value="Delete" id=""></th>
+            </tr>
+            <tr>
+                <th><input type="button" value="Close" id=""></th>
+            </tr>
+        </table></form>
+    </body>
+</html>
